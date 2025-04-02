@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FormTask from "./Components/FormTask/FormTask";
+import InputTask from "./Components/InputTask/InputTask";
+import React, { useState } from "react";
 
 function App() {
+  const [valor, setValor] = useState('');
+  const [arrayTask, setArrayTask] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <InputTask setValor={setValor} valor={valor}>
+        Nova tarefa
+      </InputTask>
+      <div className="DivBotao">
+        <button
+          className="Botao"
+          type="submit"
+          onClick={() => {
+            if (valor.trim() !== "") {
+              setArrayTask([...arrayTask, valor]);
+              setValor("");
+            }
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Adicionar
+        </button>
+      </div>
+      <FormTask arrayTask={arrayTask} setArrayTask={setArrayTask} />
     </div>
   );
 }

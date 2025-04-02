@@ -1,0 +1,10 @@
+.InputTask{
+    width: 400px;
+    height: 50px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+    font-size: 17px;
+}
