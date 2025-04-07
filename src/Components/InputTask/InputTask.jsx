@@ -10,8 +10,8 @@ const InputTask = ({ setValor, children, valor }) => {
       <input
         className="InputTask"
         type="text"
-        name=""
-        id=""
+        name="InputTask"
+        id="InputTask"
         required
         value={valor}
         onChange={handleChange}

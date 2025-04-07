@@ -10,8 +10,24 @@ const FormTask = ({ arrayTask, setArrayTask }) => {
             <div key={index} className="ButtonsDiv">
               <button className="buttonTask">{element}</button>
               <div className="divCheckbox">
-                <input className="checkbox" type="checkbox" id={element} />
+                <input
+                  className="checkbox"
+                  type="checkbox"
+                  id={index + element}
+                />
               </div>
+              <button
+                className="buttonTrash"
+                type="button"
+                onClick={() => {
+                  setArrayTask(
+                    arrayTask.filter((_, i) => i !== index),
+                    console.log(index)
+                  );
+                }}
+              >
+                remover
+              </button>
             </div>
           );
         })}

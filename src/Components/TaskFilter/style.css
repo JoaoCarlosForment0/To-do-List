@@ -1,0 +1,19 @@
+.filterDiv {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filterButton{
+    width: 30%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: cadetblue;
+    transition: .3s;
+}
+.filterButton:hover{
+    background-color: #0c8ea5;
+    cursor: pointer;
+}

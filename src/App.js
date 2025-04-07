@@ -2,6 +2,7 @@ import "./App.css";
 import FormTask from "./Components/FormTask/FormTask";
 import InputTask from "./Components/InputTask/InputTask";
 import React, { useState } from "react";
+import TaskFilter from "./Components/TaskFilter/TaskFilter";
 
 function App() {
   const [valor, setValor] = useState('');
@@ -26,6 +27,7 @@ function App() {
           Adicionar
         </button>
       </div>
+      <TaskFilter/>
       <FormTask arrayTask={arrayTask} setArrayTask={setArrayTask} />
     </div>
   );

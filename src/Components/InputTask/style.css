@@ -1,10 +1,14 @@
 .InputTask{
-    width: 400px;
-    height: 50px;
+    width: 95%;
+    height: 90%;
     background-color: aliceblue;
     border: none;
     border-radius: 5px;
-    padding-left: 10px;
+    padding-left: 5%;
     outline: none;
     font-size: 17px;
+}
+.InputTaskDiv{
+    width: 400px;
+    height: 50px;
 }
